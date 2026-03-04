@@ -1,30 +1,30 @@
 [
-    [
-      "1. I enjoy solitude.",
-      "2. I usually make decisions in the moment.",
-      "3. I find it hard to join conversations.",
-      "4. I thrive in busy, lively environments.",
-      "5. I love group activities and social events."
-    ],
-    [
-      "1. I prefer to have a daily schedule or to-do list.",
-      "2. I prefer to get work done before playing/relaxing.",
-      "3. I often make plans far in advance.",
-      "4. I work best under pressure, closer to a deadline.",
-      "5. I feel 'stuck' or restricted by strict, detailed schedules."
-    ],
-    [
-      "1. I pay attention to concrete facts and details.",
-      "2. I imagine the possibilities of how things could be.",
-      "3. I focus on the reality of how things are.",
-      "4. I seem to like something new all the time.",
-      "5. I am more interested in the future than the past."
-    ],
-    [
-      "1.When making decisions, i rely on objective logic than on my personal feeling or values",
-      "2.I would rather be honest and direct, even if it hurts someone's feeling, than prioritize harmony",
-      "3.When comforting someone, i tend to focus more on finding a practical solution to their problem",
-      "4.I feel more satisfied when a decision is fair and reasonable, rather than when it helps everyone feel supported",
-      "5.People generally describe me as more analytical and rational than empathetic and compassionate"
-    ]
+  [
+  "1. I enjoy solitude.",
+  "2. I usually make decisions in the moment.",
+  "3. I find it hard to join conversations.",
+  "4. I thrive in busy, lively environments.",
+  "5. I love group activities and social events."
+  ],
+  [
+  "1. I prefer to have a daily schedule or to-do list.",
+  "2. I prefer to get work done before playing/relaxing.",
+  "3. I often make plans far in advance.",
+  "4. I work best under pressure, closer to a deadline.",
+  "5. I feel 'stuck' or restricted by strict, detailed schedules."
+  ],
+  [
+    "1. I pay attention to concrete facts and details.",
+    "2. I imagine the possibilities of how things could be.",
+    "3. I focus on the reality of how things are.",
+    "4. I seem to like something new all the time.",
+    "5. I am more interested in the future than the past."
+  ],
+  [
+    "1.When making decisions, i rely on objective logic than on my personal feeling or values",
+    "2.I would rather be honest and direct, even if it hurts someone's feeling, than prioritize harmony",
+    "3.When comforting someone, i tend to focus more on finding a practical solution to their problem",
+    "4.I feel more satisfied when a decision is fair and reasonable, rather than when it helps everyone feel supported",
+    "5.People generally describe me as more analytical and rational than empathetic and compassionate"
+  ]
 ]

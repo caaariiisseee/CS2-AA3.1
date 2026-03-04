@@ -19,12 +19,11 @@ try:
     print("1. What is an MBTI? \n2. What does this program do?"
           "\n3. What is my MBTI? \n4. End")
     answer = int(input("\nWhat is your choice? : "))
-    print("-" * 100)
 
     while answer != 4:
 
         if answer == 1:
-            print("Myers-Briggs Type Indicator (MBTI) is a test where people get grouped into 16 personality types"
+            print("\nMyers-Briggs Type Indicator (MBTI) is a test where people get grouped into 16 personality types"
                   " based on their tendency or what they choose to do in certain situations.\nThese personality types are"
                   " a combination of : Extroversion, Introversion, Sensing, Intuition, Feeling, Thinking, Prospecting, "
                   "Judging.\nThis program was created to inform users about their MBTI and habits they usually do and their "
@@ -35,7 +34,7 @@ try:
             answer = int(input("\nWhat is your choice? : "))
 
         elif answer == 2:
-            print("This program not only gives you your MBTI, but it also provides you with what you usually do and your "
+            print("\nThis program not only gives you your MBTI, but it also provides you with what you usually do and your "
                   "personality!\nThis program is very simple and you don't need to learn every single textbook definitions"
                   " as the questions would ask about what you experience.")
 
@@ -44,7 +43,10 @@ try:
             answer = int(input("\nWhat is your choice? : "))
 
         elif answer == 3:
-            for question in data:
+            for i in data:
+                for j in i:
+                    print(j, sep=' ')
+                    howMany = input(print("Agree (a) or Disagree (d)? : "))
 
 
         else:
