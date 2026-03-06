@@ -7,3 +7,4 @@ This program not only gives you your MBTI, but it also provides you with what yo
 As the user opens up the program, a menu is flashed explaning what the user should expect to do. Questions are then presented with the choices for the user to choose from are inserted within. After all the four sections answered, the program calculates what the user's MBTI is based from the given answers and provide habits and personality traits that the certain MBTI commonly does.
 
 This program was made by : Carisse Lugo, Alexis Littaua, Lemuel Poquiz
+03/06/2026

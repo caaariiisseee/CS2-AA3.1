@@ -67,6 +67,8 @@ try:
                     choice = input("Agree (a) or Disagree (b)? : ")
                     print("-" * 100)
                     if data.index(i) == 0:
+
+                        # adds to the introvert side
                         if choice == "a":
                             introvert += 1
                             print(f"+1 to the introvert side! "
@@ -78,6 +80,7 @@ try:
                                   f"\nFeeling : {feeling}")
                             print("-" * 100)
 
+                        # adds to the extrovert side
                         if choice == "b":
                             extrovert += 1
                             print(f"+1 to the extrovert side! "
@@ -90,6 +93,8 @@ try:
                             print("-" * 100)
 
                     if data.index(i) == 1:
+
+                        # adds to the judging side
                         if choice == "a":
                             judging += 1
                             print(f"+1 to the judging side! "
@@ -101,6 +106,7 @@ try:
                                   f"\nFeeling : {feeling}")
                             print("-" * 100)
 
+                        # adds to the prospecting side
                         if choice == "b":
                             prospecting += 1
                             print(f"+1 to the prospecting side! "
@@ -113,6 +119,8 @@ try:
                             print("-" * 100)
 
                     if data.index(i) == 2:
+
+                        # adds to the sensing side
                         if choice == "a":
                             sensing += 1
                             print(f"+1 to the sensing side! "
@@ -124,6 +132,7 @@ try:
                                   f"\nFeeling : {feeling}")
                             print("-" * 100)
 
+                        # adds to the intuition side
                         if choice == "b":
                             intuition += 1
                             print(f"+1 to the intuition side! "
@@ -136,6 +145,8 @@ try:
                             print("-" * 100)
 
                     if data.index(i) == 3:
+
+                        # adds to the thinking side
                         if choice == "a":
                             thinking += 1
                             print(f"+1 to the thinking side! "
@@ -147,6 +158,7 @@ try:
                                   f"\nFeeling : {feeling}")
                             print("-" * 100)
 
+                        # adds to the feeling side
                         if choice == "b":
                             feeling += 1
                             print(f"+1 to the feeling side! "
@@ -158,13 +170,72 @@ try:
                                   f"\nFeeling : {feeling}")
                             print("-" * 100)
 
+            # prints out the result of MBTI
+            print("Thank you for answering our MBTI checker! Here are your results: ")
+
+            # introversion or extroversion
+            print("\nfor the introvert and extrovert side: ")
+            if introvert > extrovert:
+                print("You are leaning toward the introvert side."
+                      "\n- You tend to focus on individual activities."
+                      "\n- You get described as 'shy'")
+                mbti_one = "I"
+            if extrovert > introvert:
+                print("You are leaning toward the extrovert side."
+                      "\n- You include yourself in social gatherings."
+                      "\n- You get described as 'friendly'")
+                mbti_one = "E"
+
+            # sensing or intuition
+            print("\nfor the sensing and intuition side: ")
+            if sensing > intuition:
+                print("You are leaning toward the sensing side."
+                        "\n- You focus on details."
+                        "\n- You get described as 'attentive'")
+                mbti_two = "S"
+            if intuition > sensing:
+                print("You are leaning toward the intuition side."
+                        "\n- You think reality is just as important as imaginations."
+                        "\n- You get described as 'imaginative'")
+                mbti_two = "N"
+
+            # thinking or feeling
+            print("\nfor the thinking and feeling side: ")
+            if thinking > feeling:
+                print("You are leaning toward the thinking side."
+                        "\n- You leave personal feelings out the conversation."
+                        "\n- You get described as 'honest'")
+                mbti_three = "T"
+            if feeling > thinking:
+                print("You are leaning toward the feeling side."
+                        "\n- You think about the feelings of others before making decisions."
+                        "\n- You get described as 'thoughtful'")
+                mbti_three = "F"
+            # judging or prospecting
+            print("\nfor the judging and prospecting side: ")
+            if judging > prospecting:
+                print("You are leaning toward the judging side."
+                      "\n- You are very structured."
+                      "\n- You get described as 'prepared'")
+                mbti_four = "J"
+            if prospecting > judging:
+                print("You are leaning toward the prospecting side."
+                      "\n- You are very flexible."
+                      "\n- You get described as 'laid back'")
+                mbti_four = "P"
+
+
+            print("\nFinal MBTI: ")
+            print(f"{mbti_one}{mbti_two}{mbti_three}{mbti_four}")
+
+        # tells the user to put a valid input
         else:
             print("Please  input a valid choice!")
             print("1. What is an MBTI? \n2. What does this program do?"
                   "\n3. What is my MBTI? \n4. End")
             answer = int(input("\nWhat is your choice? : "))
 
-
+# error control
 except FileNotFoundError:
     print("Error: The file 'data.json' was not found.")
 except json.JSONDecodeError as e:
