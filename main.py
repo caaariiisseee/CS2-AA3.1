@@ -64,7 +64,7 @@ try:
             for i in data:
                 for j in i:
                     print(j)
-                    choice = input("Agree (a) or Disagree (b)? : ")
+                    choice = input("Agree (a) or Disagree (b)?: ")
                     print("-" * 100)
                     if data.index(i) == 0:
 
@@ -224,13 +224,30 @@ try:
                       "\n- You get described as 'laid back'")
                 mbti_four = "P"
 
-
+            # prints the final mbti
             print("\nFinal MBTI: ")
             print(f"{mbti_one}{mbti_two}{mbti_three}{mbti_four}")
 
+            # asks the user for their choice if they want to go back to the menu
+            yes_no = input("\nDo you want to go back to the main menu? (yes/no): ")
+
+            if yes_no == "yes":
+                print("Please  input a valid choice!")
+                print("1. What is an MBTI? \n2. What does this program do?"
+                      "\n3. What is my MBTI? \n4. End")
+                answer = int(input("\nWhat is your choice? : "))
+
+            elif yes_no == "no":
+                print("Thank you for using CLA's MBTI tracker!")
+                break
+
+            else:
+                print("Please input a valid answer!")
+                yes_no = input("\nDo you want to go back to the main menu? (yes/no): ")
+
         # tells the user to put a valid input
         else:
-            print("Please  input a valid choice!")
+            print("Please input a valid choice!")
             print("1. What is an MBTI? \n2. What does this program do?"
                   "\n3. What is my MBTI? \n4. End")
             answer = int(input("\nWhat is your choice? : "))
