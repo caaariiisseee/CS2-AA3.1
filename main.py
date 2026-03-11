@@ -7,13 +7,28 @@ import json
 
 try:
     # READING from the file
-    filename = "questions.json"
+    filename = "intORext.json"
     with open(filename, 'r') as file:
         # Load the JSON data from the file
-        data = json.load(file)
+        data_one = json.load(file)
+
+    filename = "senORint.json"
+    with open(filename, 'r') as file:
+        # Load the JSON data from the file
+        data_two = json.load(file)
+
+    filename = "feeORthi.json"
+    with open(filename, 'r') as file:
+        # Load the JSON data from the file
+        data_three = json.load(file)
+
+    filename = "judORper.json"
+    with open(filename, 'r') as file:
+        # Load the JSON data from the file
+        data_four = json.load(file)
 
     # Print an introduction and menu
-    print("Hello! Welcome to Stay In or Go Out : MBTI Tester")
+    print("\nHello! Welcome to Stay In or Go Out : MBTI Tester")
     print("\nMenu:")
 
     print("1. What is an MBTI? \n2. What does this program do?"
@@ -60,115 +75,99 @@ try:
         # the actual questions that present the tracker of each answer
         if answer == 3:
             print("-" * 100)
-            print("\nWelcome to CLA's MBTI checker! This program will not use your personal information against you :)")
-            for i in data:
-                for j in i:
-                    print(j)
-                    choice = input("Agree (a) or Disagree (b)?: ")
+            print("Welcome to CLA's MBTI checker! This program will not use your personal information against you :)")
+
+            # for the introvert or extrovert side
+            print("\nINTROVERT OR EXTROVERT?")
+            print("-" * 100)
+            for i in data_one:
+                print(i)
+                choice = input("Agree (a) or Disagree (b)?: ")
+
+
+                # adds to the introvert side
+                if choice == "a":
+                    introvert += 1
+                    print(f"\n+1 to the introvert side! "
+                            f"\nIntrovert : {introvert}"
+                            f"\nExtrovert : {extrovert}")
                     print("-" * 100)
-                    if data.index(i) == 0:
 
-                        # adds to the introvert side
-                        if choice == "a":
-                            introvert += 1
-                            print(f"+1 to the introvert side! "
-                                  f"\nIntrovert : {introvert}"
-                                  f"\nExtrovert : {extrovert}"
-                                  f"\nJudging : {judging}"
-                                  f"\nProspecting : {prospecting}"
-                                  f"\nThinking : {thinking}"
-                                  f"\nFeeling : {feeling}")
-                            print("-" * 100)
+                # adds to the extrovert side
+                if choice == "b":
+                    extrovert += 1
+                    print(f"\n+1 to the extrovert side! "
+                            f"\nIntrovert : {introvert}"
+                            f"\nExtrovert : {extrovert}")
+                    print("-" * 100)
 
-                        # adds to the extrovert side
-                        if choice == "b":
-                            extrovert += 1
-                            print(f"+1 to the extrovert side! "
-                                  f"\nIntrovert : {introvert}"
-                                  f"\nExtrovert : {extrovert}"
-                                  f"\nJudging : {judging}"
-                                  f"\nProspecting : {prospecting}"
-                                  f"\nThinking : {thinking}"
-                                  f"\nFeeling : {feeling}")
-                            print("-" * 100)
+            # for the judging and prospecting side
+            print("JUDGING OR PROSPECTING?")
+            print("-" * 100)
+            for i in data_four:
+                print(i)
+                choice = input("Agree (a) or Disagree (b)?: ")
+                # adds to the judging side
+                if choice == "a":
+                    judging += 1
+                    print(f"\n+1 to the judging side! "
+                            f"\nJudging : {judging}"
+                            f"\nProspecting : {prospecting}")
+                    print("-" * 100)
 
-                    if data.index(i) == 1:
+                # adds to the prospecting side
+                if choice == "b":
+                    prospecting += 1
+                    print(f"\n+1 to the prospecting side! "
+                            f"\nJudging : {judging}"
+                            f"\nProspecting : {prospecting}")
+                    print("-" * 100)
 
-                        # adds to the judging side
-                        if choice == "a":
-                            judging += 1
-                            print(f"+1 to the judging side! "
-                                  f"\nIntrovert : {introvert}"
-                                  f"\nExtrovert : {extrovert}"
-                                  f"\nJudging : {judging}"
-                                  f"\nProspecting : {prospecting}"
-                                  f"\nThinking : {thinking}"
-                                  f"\nFeeling : {feeling}")
-                            print("-" * 100)
+            # for the sensing and intuitive side
+            print("SENSING OR INTUITION?")
+            print("-" * 100)
+            for i in data_two:
+                print(i)
+                choice = input("Agree (a) or Disagree (b)?: ")
 
-                        # adds to the prospecting side
-                        if choice == "b":
-                            prospecting += 1
-                            print(f"+1 to the prospecting side! "
-                                  f"\nIntrovert : {introvert}"
-                                  f"\nExtrovert : {extrovert}"
-                                  f"\nJudging : {judging}"
-                                  f"\nProspecting : {prospecting}"
-                                  f"\nThinking : {thinking}"
-                                  f"\nFeeling : {feeling}")
-                            print("-" * 100)
+                # adds to the sensing side
+                if choice == "a":
+                    sensing += 1
+                    print(f"\n+1 to the sensing side! "
+                            f"\nSensing : {sensing}"
+                            f"\nIntuition : {intuition}")
+                    print("-" * 100)
 
-                    if data.index(i) == 2:
+                    # adds to the intuition side
+                if choice == "b":
+                    intuition += 1
+                    print(f"\n+1 to the intuition side! "
+                            f"\nSensing : {sensing}"
+                            f"\nIntuition : {intuition}")
+                    print("-" * 100)
 
-                        # adds to the sensing side
-                        if choice == "a":
-                            sensing += 1
-                            print(f"+1 to the sensing side! "
-                                  f"\nIntrovert : {introvert}"
-                                  f"\nExtrovert : {extrovert}"
-                                  f"\nJudging : {judging}"
-                                  f"\nProspecting : {prospecting}"
-                                  f"\nThinking : {thinking}"
-                                  f"\nFeeling : {feeling}")
-                            print("-" * 100)
+            # for the feeling or thinking side
+            print("FEELING OR THINKING""?")
+            print("-" * 100)
+            for i in data_three:
+                print(i)
+                choice = input("Agree (a) or Disagree (b)?: ")
 
-                        # adds to the intuition side
-                        if choice == "b":
-                            intuition += 1
-                            print(f"+1 to the intuition side! "
-                                  f"\nIntrovert : {introvert}"
-                                  f"\nExtrovert : {extrovert}"
-                                  f"\nJudging : {judging}"
-                                  f"\nProspecting : {prospecting}"
-                                  f"\nThinking : {thinking}"
-                                  f"\nFeeling : {feeling}")
-                            print("-" * 100)
+                # adds to the thinking side
+                if choice == "a":
+                    thinking += 1
+                    print(f"\n+1 to the thinking side! "
+                            f"\nThinking : {thinking}"
+                            f"\nFeeling : {feeling}")
+                    print("-" * 100)
 
-                    if data.index(i) == 3:
-
-                        # adds to the thinking side
-                        if choice == "a":
-                            thinking += 1
-                            print(f"+1 to the thinking side! "
-                                  f"\nIntrovert : {introvert}"
-                                  f"\nExtrovert : {extrovert}"
-                                  f"\nJudging : {judging}"
-                                  f"\nProspecting : {prospecting}"
-                                  f"\nThinking : {thinking}"
-                                  f"\nFeeling : {feeling}")
-                            print("-" * 100)
-
-                        # adds to the feeling side
-                        if choice == "b":
-                            feeling += 1
-                            print(f"+1 to the feeling side! "
-                                  f"\nIntrovert : {introvert}"
-                                  f"\nExtrovert : {extrovert}"
-                                  f"\nJudging : {judging}"
-                                  f"\nProspecting : {prospecting}"
-                                  f"\nThinking : {thinking}"
-                                  f"\nFeeling : {feeling}")
-                            print("-" * 100)
+                # adds to the feeling side
+                if choice == "b":
+                    feeling += 1
+                    print(f"\n+1 to the feeling side! "
+                            f"\nThinking : {thinking}"
+                            f"\nFeeling : {feeling}")
+                    print("-" * 100)
 
             # prints out the result of MBTI
             print("Thank you for answering our MBTI checker! Here are your results: ")
@@ -254,7 +253,7 @@ try:
 
 # error control
 except FileNotFoundError:
-    print("Error: The file 'data.json' was not found.")
+    print("Error: The file 'judORper.json' was not found.")
 except json.JSONDecodeError as e:
     print(f"Failed to decode JSON: {e}")
 
