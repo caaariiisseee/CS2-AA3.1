@@ -84,22 +84,28 @@ try:
                 print(i)
                 choice = input("Agree (a) or Disagree (b)?: ")
 
+                # while loop to handle input errors
+                while choice != 'a' or choice != 'b' or choice != 'A' or choice != 'B':
+                    print("\ninvalid input please try again :)")
+                    print(i)
+                    choice = input("Agree (a) or Disagree (b)?: ")
 
                 # adds to the introvert side
-                if choice == "a":
+                if choice == 'a' or 'A':
                     introvert += 1
                     print(f"\n+1 to the introvert side! "
                             f"\nIntrovert : {introvert}"
                             f"\nExtrovert : {extrovert}")
-                    print("-" * 100)
 
                 # adds to the extrovert side
-                if choice == "b":
+                if choice == 'b' or 'B':
                     extrovert += 1
                     print(f"\n+1 to the extrovert side! "
                             f"\nIntrovert : {introvert}"
                             f"\nExtrovert : {extrovert}")
                     print("-" * 100)
+
+
 
             # for the judging and prospecting side
             print("JUDGING OR PROSPECTING?")
@@ -108,7 +114,7 @@ try:
                 print(i)
                 choice = input("Agree (a) or Disagree (b)?: ")
                 # adds to the judging side
-                if choice == "a":
+                if choice == 'a':
                     judging += 1
                     print(f"\n+1 to the judging side! "
                             f"\nJudging : {judging}"
