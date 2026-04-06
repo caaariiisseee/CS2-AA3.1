@@ -6,6 +6,9 @@
 import json
 from tokenize import endpats
 
+# import the time function for smoother transitions
+import time
+
 try:
     # READING from the file
     filename = "intORext.json"
@@ -30,10 +33,13 @@ try:
 
     # Print an introduction and menu
     print("\nHello! Welcome to Stay In or Go Out : MBTI Tester")
+    time.sleep(1)
+    
     print("\nMenu:")
-
+    time.sleep(0.5)
     print("1. What is an MBTI? \n2. What does this program do?"
           "\n3. What is my MBTI? \n4. End")
+    time.sleep(0.5)
     answer = int(input("\nWhat is your choice? : "))
 
     # while loop to ensure all the inputs are valid
@@ -46,6 +52,7 @@ try:
                   " a combination of : Extroversion, Introversion, Sensing, Intuition, Feeling, Thinking, Prospecting, "
                   "Judging.\nThis program was created to inform users about their MBTI and habits they usually do and their "
                   "personality after answering a set of questions.")
+            time.sleep(2)
             print()
             print("-" * 100)
             print("1. What is an MBTI? \n2. What does this program do?"
@@ -57,6 +64,7 @@ try:
             print("\nThis program not only gives you your MBTI, but it also provides you with what you usually do and your "
                   "personality!\nThis program is very simple and you don't need to learn every single textbook definitions"
                   " as the questions would ask about what you experience.")
+            time.sleep(2)
             print()
             print("-" * 100)
             print("\n1. What is an MBTI? \n2. What does this program do?"
@@ -77,9 +85,11 @@ try:
         if answer == 3:
             print("-" * 100)
             print("Welcome to CLA's MBTI checker! This program will not use your personal information against you :)")
+            time.sleep(1)
 
             # for the introvert or extrovert side
             print("\nINTROVERT OR EXTROVERT?")
+            time.sleep(0.5)
             print("-" * 100)
             for i in data_one:
                 print(i)
@@ -128,6 +138,7 @@ try:
 
             # for the judging and prospecting side
             print("JUDGING OR PROSPECTING?")
+            time.sleep 0.5
             print("-" * 100)
             for i in data_four:
                 print(i)
@@ -157,6 +168,7 @@ try:
 
             # for the sensing and intuitive side
             print("SENSING OR INTUITION?")
+            time.sleep(0.5)
             print("-" * 100)
             for i in data_two:
                 print(i)
@@ -186,6 +198,7 @@ try:
 
             # for the feeling or thinking side
             print("FEELING OR THINKING""?")
+            time.sleep(0.5)
             print("-" * 100)
             for i in data_three:
                 print(i)
@@ -215,6 +228,7 @@ try:
 
             # prints out the result of MBTI
             print("Thank you for answering our MBTI checker! Here are your results: ")
+            time.sleep(1)
 
             # introversion or extroversion
             print("\nfor the introvert and extrovert side: ")
@@ -272,12 +286,14 @@ try:
             print(f"{mbti_one}{mbti_two}{mbti_three}{mbti_four}")
 
             # asks the user for their choice if they want to go back to the menu
+            time.sleep(1)
             yes_no = input("\nDo you want to go back to the main menu? (yes/no): ")
 
             if yes_no == "yes":
-                print("Please  input a valid choice!")
+                
                 print("1. What is an MBTI? \n2. What does this program do?"
                       "\n3. What is my MBTI? \n4. End")
+                time.sleep(0.5)
                 answer = int(input("\nWhat is your choice? : "))
 
             elif yes_no == "no":
@@ -286,6 +302,7 @@ try:
 
             else:
                 print("Please input a valid answer!")
+                time.sleep(0.5)
                 yes_no = input("\nDo you want to go back to the main menu? (yes/no): ")
 
         # tells the user to put a valid input
