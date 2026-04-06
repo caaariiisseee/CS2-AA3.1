@@ -4,6 +4,7 @@
 
 # import the json function
 import json
+from tokenize import endpats
 
 try:
     # READING from the file
@@ -83,28 +84,46 @@ try:
             for i in data_one:
                 print(i)
                 choice = input("Agree (a) or Disagree (b)?: ")
+                valid_answer = False
 
-                # while loop to handle input errors
-                while choice != 'a' or choice != 'b' or choice != 'A' or choice != 'B':
+                if choice == "a" or choice == "A" or choice == "b" or choice == "B":
+                    valid_answer = True
+
+                    # adds to the introvert side
+                    if choice == "a":
+                        introvert += 1
+                        print(f"\n+1 to the introvert side! "
+                              f"\nIntrovert : {introvert}"
+                              f"\nExtrovert : {extrovert}")
+                        print("-" * 100)
+
+                    if choice == "A":
+                        introvert += 1
+                        print(f"\n+1 to the introvert side! "
+                              f"\nIntrovert : {introvert}"
+                              f"\nExtrovert : {extrovert}")
+                        print("-" * 100)
+
+                    # adds to the extrovert side
+                    if choice == "b":
+                        extrovert += 1
+                        print(f"\n+1 to the extrovert side! "
+                              f"\nIntrovert : {introvert}"
+                              f"\nExtrovert : {extrovert}")
+                        print("-" * 100)
+
+                    if choice == "B":
+                        extrovert += 1
+                        print(f"\n+1 to the extrovert side! "
+                              f"\nIntrovert : {introvert}"
+                              f"\nExtrovert : {extrovert}")
+                        print("-" * 100)
+
+                else:
+                    valid_answer = False
                     print("\ninvalid input please try again :)")
                     print(i)
                     choice = input("Agree (a) or Disagree (b)?: ")
-
-                # adds to the introvert side
-                if choice == 'a' or 'A':
-                    introvert += 1
-                    print(f"\n+1 to the introvert side! "
-                            f"\nIntrovert : {introvert}"
-                            f"\nExtrovert : {extrovert}")
-
-                # adds to the extrovert side
-                if choice == 'b' or 'B':
-                    extrovert += 1
-                    print(f"\n+1 to the extrovert side! "
-                            f"\nIntrovert : {introvert}"
-                            f"\nExtrovert : {extrovert}")
-                    print("-" * 100)
-
 
 
             # for the judging and prospecting side
@@ -113,6 +132,13 @@ try:
             for i in data_four:
                 print(i)
                 choice = input("Agree (a) or Disagree (b)?: ")
+
+                # while loop to handle input errors
+                while choice != 'a' or choice != 'b' or choice != 'A' or choice != 'B':
+                    print("\ninvalid input please try again :)")
+                    print(i)
+                    choice = input("Agree (a) or Disagree (b)?: ")
+
                 # adds to the judging side
                 if choice == 'a':
                     judging += 1
@@ -122,7 +148,7 @@ try:
                     print("-" * 100)
 
                 # adds to the prospecting side
-                if choice == "b":
+                if choice == 'b':
                     prospecting += 1
                     print(f"\n+1 to the prospecting side! "
                             f"\nJudging : {judging}"
@@ -136,8 +162,14 @@ try:
                 print(i)
                 choice = input("Agree (a) or Disagree (b)?: ")
 
+                # while loop to handle input errors
+                while choice != 'a' or choice != 'b' or choice != 'A' or choice != 'B':
+                    print("\ninvalid input please try again :)")
+                    print(i)
+                    choice = input("Agree (a) or Disagree (b)?: ")
+
                 # adds to the sensing side
-                if choice == "a":
+                if choice == 'a':
                     sensing += 1
                     print(f"\n+1 to the sensing side! "
                             f"\nSensing : {sensing}"
@@ -145,7 +177,7 @@ try:
                     print("-" * 100)
 
                     # adds to the intuition side
-                if choice == "b":
+                if choice == 'b':
                     intuition += 1
                     print(f"\n+1 to the intuition side! "
                             f"\nSensing : {sensing}"
@@ -159,8 +191,14 @@ try:
                 print(i)
                 choice = input("Agree (a) or Disagree (b)?: ")
 
+                # while loop to handle input errors
+                while choice != 'a' or choice != 'b' or choice != 'A' or choice != 'B':
+                    print("\ninvalid input please try again :)")
+                    print(i)
+                    choice = input("Agree (a) or Disagree (b)?: ")
+
                 # adds to the thinking side
-                if choice == "a":
+                if choice == 'a':
                     thinking += 1
                     print(f"\n+1 to the thinking side! "
                             f"\nThinking : {thinking}"
@@ -168,7 +206,7 @@ try:
                     print("-" * 100)
 
                 # adds to the feeling side
-                if choice == "b":
+                if choice == 'b':
                     feeling += 1
                     print(f"\n+1 to the feeling side! "
                             f"\nThinking : {thinking}"
