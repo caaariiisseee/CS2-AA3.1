@@ -342,23 +342,23 @@ try:
 
             # asks the user for their choice if they want to go back to the menu
             time.sleep(1)
-            yes_no = input("\nDo you want to go back to the main menu? (yes/no): ")
+            yes_no = int(input("\nDo you want to (1) go back to the main menu or (2) end the program?: "))
 
-            if yes_no == "yes":
+            if yes_no == 1:
                 
                 print("1. What is an MBTI? \n2. What does this program do?"
                       "\n3. What is my MBTI? \n4. End")
                 time.sleep(0.5)
                 answer = int(input("\nWhat is your choice? : "))
 
-            elif yes_no == "no":
+            elif yes_no == 2:
                 print("Thank you for using CLA's MBTI tracker!")
                 break
 
             else:
                 print("Please input a valid answer!")
                 time.sleep(0.5)
-                yes_no = input("\nDo you want to go back to the main menu? (yes/no): ")
+                yes_no = int(input("\nDo you want to (1) go back to the main menu or (2) end the program?: "))
 
         # tells the user to put a valid input
         else:
