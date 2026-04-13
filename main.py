@@ -94,6 +94,8 @@ try:
             for i in data_one:
                 print(i)
                 choice = input("Agree (a) or Disagree (b)?: ")
+
+                # validation variable for error handling
                 valid_answer = False
 
                 if choice == "a" or choice == "A" or choice == "b" or choice == "B":
@@ -102,20 +104,16 @@ try:
                     # adds to the introvert side
                     if choice == "a":
                         introvert += 1
-                        print("-" * 100)
 
                     if choice == "A":
                         introvert += 1
-                        print("-" * 100)
 
                     # adds to the extrovert side
                     if choice == "b":
                         extrovert += 1
-                        print("-" * 100)
 
                     if choice == "B":
                         extrovert += 1
-                        print("-" * 100)
 
                 else:
                     valid_answer = False
@@ -125,25 +123,24 @@ try:
 
                     if choice == "a":
                         introvert += 1
-                        print("-" * 100)
                     if choice == "A":
                         introvert += 1
-                        print("-" * 100)
                     if choice == "b":
                         extrovert += 1
-                        print("-" * 100)
                     if choice == "B":
                         extrovert += 1
-                        print("-" * 100)
 
 
             # for the judging and prospecting side
+            print("-" * 100)
             print("JUDGING OR PROSPECTING?")
             time.sleep(0.5)
             print("-" * 100)
             for i in data_four:
                 print(i)
                 choice = input("Agree (a) or Disagree (b)?: ")
+
+                # validation variable for error handling
                 valid_answer = False
 
                 if choice == "a" or choice == "A" or choice == "b" or choice == "B":
@@ -152,20 +149,16 @@ try:
                     # adds to the judging side
                     if choice == "a":
                         judging += 1
-                        print("-" * 100)
 
                     if choice == "A":
                         judging += 1
-                        print("-" * 100)
 
                     # adds to the prospecting side
                     if choice == "b":
                         prospecting += 1
-                        print("-" * 100)
 
                     if choice == "B":
                         prospecting += 1
-                        print("-" * 100)
 
                 else:
                     valid_answer = False
@@ -174,24 +167,23 @@ try:
                     choice = input("Agree (a) or Disagree (b)?: ")
                     if choice == "a":
                         judging += 1
-                        print("-" * 100)
                     if choice == "A":
                         judging += 1
-                        print("-" * 100)
                     if choice == "b":
                         prospecting += 1
-                        print("-" * 100)
                     if choice == "B":
                         prospecting += 1
-                        print("-" * 100)
 
             # for the sensing and intuitive side
+            print("-" * 100)
             print("SENSING OR INTUITION?")
             time.sleep(0.5)
             print("-" * 100)
             for i in data_two:
                 print(i)
                 choice = input("Agree (a) or Disagree (b)?: ")
+
+                # validation variable for error handling
                 valid_answer = False
 
                 if choice == "a" or choice == "A" or choice == "b" or choice == "B":
@@ -200,20 +192,16 @@ try:
                     # adds to the sensing side
                     if choice == "a":
                         sensing += 1
-                        print("-" * 100)
 
                     if choice == "A":
                         sensing += 1
-                        print("-" * 100)
 
                     # adds to the intuition side
                     if choice == "b":
                         intuition += 1
-                        print("-" * 100)
 
                     if choice == "B":
                         intuition += 1
-                        print("-" * 100)
 
                 else:
                     valid_answer = False
@@ -222,24 +210,23 @@ try:
                     choice = input("Agree (a) or Disagree (b)?: ")
                     if choice == "a":
                         sensing += 1
-                        print("-" * 100)
                     if choice == "A":
                         sensing += 1
-                        print("-" * 100)
                     if choice == "b":
                         intuition += 1
-                        print("-" * 100)
                     if choice == "B":
                         intuition += 1
-                        print("-" * 100)
 
             # for the feeling or thinking side
+            print("-" * 100)
             print("FEELING OR THINKING""?")
             time.sleep(0.5)
             print("-" * 100)
             for i in data_three:
                 print(i)
                 choice = input("Agree (a) or Disagree (b)?: ")
+
+                # validation variable for error handling
                 valid_answer = False
 
                 if choice == "a" or choice == "A" or choice == "b" or choice == "B":
@@ -248,20 +235,16 @@ try:
                     # adds to the thinking side
                     if choice == "a":
                         thinking += 1
-                        print("-" * 100)
 
                     if choice == "A":
                         thinking += 1
-                        print("-" * 100)
 
                     # adds to the feeling side
                     if choice == "b":
                         feeling += 1
-                        print("-" * 100)
 
                     if choice == "B":
                         feeling += 1
-                        print("-" * 100)
 
                 else:
                     valid_answer = False
@@ -270,22 +253,18 @@ try:
                     choice = input("Agree (a) or Disagree (b)?: ")
                     if choice == "a":
                         thinking += 1
-                        print("-" * 100)
                     if choice == "A":
                         thinking += 1
-                        print("-" * 100)
                     if choice == "b":
                         feeling += 1
-                        print("-" * 100)
                     if choice == "B":
                         feeling += 1
-                        print("-" * 100)
 
             # prints out the result of MBTI
             print("Thank you for answering our MBTI checker! Here are your results: ")
             time.sleep(1)
 
-            # introversion or extroversion
+            # introversion or extroversion description
             print("\nfor the introvert and extrovert side: ")
             if introvert > extrovert:
                 print("You are leaning toward the introvert side."
@@ -298,7 +277,7 @@ try:
                       "\n- You get described as 'friendly'")
                 mbti_one = "E"
 
-            # sensing or intuition
+            # sensing or intuition description
             print("\nfor the sensing and intuition side: ")
             if sensing > intuition:
                 print("You are leaning toward the sensing side."
@@ -311,7 +290,7 @@ try:
                         "\n- You get described as 'imaginative'")
                 mbti_two = "N"
 
-            # thinking or feeling
+            # thinking or feeling description
             print("\nfor the thinking and feeling side: ")
             if thinking > feeling:
                 print("You are leaning toward the thinking side."
@@ -323,7 +302,8 @@ try:
                         "\n- You think about the feelings of others before making decisions."
                         "\n- You get described as 'thoughtful'")
                 mbti_three = "F"
-            # judging or prospecting
+
+            # judging or prospecting description
             print("\nfor the judging and prospecting side: ")
             if judging > prospecting:
                 print("You are leaning toward the judging side."
@@ -363,7 +343,7 @@ try:
         # tells the user to put a valid input
         else:
             print("Please input a valid choice!")
-            print("1. What is an MBTI? \n2. What does this program do?"
+            print("\n1. What is an MBTI? \n2. What does this program do?"
                   "\n3. What is my MBTI? \n4. End")
             answer = int(input("\nWhat is your choice? : "))
 
