@@ -102,38 +102,39 @@ try:
                     # adds to the introvert side
                     if choice == "a":
                         introvert += 1
-                        print(f"\n+1 to the introvert side! "
-                              f"\nIntrovert : {introvert}"
-                              f"\nExtrovert : {extrovert}")
                         print("-" * 100)
 
                     if choice == "A":
                         introvert += 1
-                        print(f"\n+1 to the introvert side! "
-                              f"\nIntrovert : {introvert}"
-                              f"\nExtrovert : {extrovert}")
                         print("-" * 100)
 
                     # adds to the extrovert side
                     if choice == "b":
                         extrovert += 1
-                        print(f"\n+1 to the extrovert side! "
-                              f"\nIntrovert : {introvert}"
-                              f"\nExtrovert : {extrovert}")
                         print("-" * 100)
 
                     if choice == "B":
                         extrovert += 1
-                        print(f"\n+1 to the extrovert side! "
-                              f"\nIntrovert : {introvert}"
-                              f"\nExtrovert : {extrovert}")
                         print("-" * 100)
 
                 else:
                     valid_answer = False
                     print("\ninvalid input please try again :)")
-                    print(i)
+                    print(f"\n{i}")
                     choice = input("Agree (a) or Disagree (b)?: ")
+
+                    if choice == "a":
+                        introvert += 1
+                        print("-" * 100)
+                    if choice == "A":
+                        introvert += 1
+                        print("-" * 100)
+                    if choice == "b":
+                        extrovert += 1
+                        print("-" * 100)
+                    if choice == "B":
+                        extrovert += 1
+                        print("-" * 100)
 
 
             # for the judging and prospecting side
@@ -151,38 +152,38 @@ try:
                     # adds to the judging side
                     if choice == "a":
                         judging += 1
-                        print(f"\n+1 to the judging side! "
-                                f"\nJudging : {judging}"
-                                f"\nProspecting : {prospecting}")
                         print("-" * 100)
 
                     if choice == "A":
                         judging += 1
-                        print(f"\n+1 to the judging side! "
-                                f"\nJudging : {judging}"
-                                f"\nProspecting : {prospecting}")
                         print("-" * 100)
 
                     # adds to the prospecting side
                     if choice == "b":
                         prospecting += 1
-                        print(f"\n+1 to the prospecting side! "
-                                f"\nJudging : {judging}"
-                                f"\nProspecting : {prospecting}")
                         print("-" * 100)
 
                     if choice == "B":
                         prospecting += 1
-                        print(f"\n+1 to the prospecting side! "
-                                f"\nJudging : {judging}"
-                                f"\nProspecting : {prospecting}")
                         print("-" * 100)
 
                 else:
                     valid_answer = False
                     print("\ninvalid input please try again :)")
-                    print(i)
+                    print(f"\n{i}")
                     choice = input("Agree (a) or Disagree (b)?: ")
+                    if choice == "a":
+                        judging += 1
+                        print("-" * 100)
+                    if choice == "A":
+                        judging += 1
+                        print("-" * 100)
+                    if choice == "b":
+                        prospecting += 1
+                        print("-" * 100)
+                    if choice == "B":
+                        prospecting += 1
+                        print("-" * 100)
 
             # for the sensing and intuitive side
             print("SENSING OR INTUITION?")
@@ -199,38 +200,38 @@ try:
                     # adds to the sensing side
                     if choice == "a":
                         sensing += 1
-                        print(f"\n+1 to the sensing side! "
-                                f"\nSensing : {sensing}"
-                                f"\nIntuition : {intuition}")
                         print("-" * 100)
 
                     if choice == "A":
                         sensing += 1
-                        print(f"\n+1 to the sensing side! "
-                                f"\nSensing : {sensing}"
-                                f"\nIntuition : {intuition}")
                         print("-" * 100)
 
                     # adds to the intuition side
                     if choice == "b":
                         intuition += 1
-                        print(f"\n+1 to the intuition side! "
-                                f"\nSensing : {sensing}"
-                                f"\nIntuition : {intuition}")
                         print("-" * 100)
 
                     if choice == "B":
                         intuition += 1
-                        print(f"\n+1 to the intuition side! "
-                                f"\nSensing : {sensing}"
-                                f"\nIntuition : {intuition}")
                         print("-" * 100)
 
                 else:
                     valid_answer = False
                     print("\ninvalid input please try again :)")
-                    print(i)
+                    print(f"\n{i}")
                     choice = input("Agree (a) or Disagree (b)?: ")
+                    if choice == "a":
+                        sensing += 1
+                        print("-" * 100)
+                    if choice == "A":
+                        sensing += 1
+                        print("-" * 100)
+                    if choice == "b":
+                        intuition += 1
+                        print("-" * 100)
+                    if choice == "B":
+                        intuition += 1
+                        print("-" * 100)
 
             # for the feeling or thinking side
             print("FEELING OR THINKING""?")
@@ -247,38 +248,38 @@ try:
                     # adds to the thinking side
                     if choice == "a":
                         thinking += 1
-                        print(f"\n+1 to the thinking side! "
-                                f"\nThinking : {thinking}"
-                                f"\nFeeling : {feeling}")
                         print("-" * 100)
 
                     if choice == "A":
                         thinking += 1
-                        print(f"\n+1 to the thinking side! "
-                                f"\nThinking : {thinking}"
-                                f"\nFeeling : {feeling}")
                         print("-" * 100)
 
                     # adds to the feeling side
                     if choice == "b":
                         feeling += 1
-                        print(f"\n+1 to the feeling side! "
-                                f"\nThinking : {thinking}"
-                                f"\nFeeling : {feeling}")
                         print("-" * 100)
 
                     if choice == "B":
                         feeling += 1
-                        print(f"\n+1 to the feeling side! "
-                                f"\nThinking : {thinking}"
-                                f"\nFeeling : {feeling}")
                         print("-" * 100)
 
                 else:
                     valid_answer = False
                     print("\ninvalid input please try again :)")
-                    print(i)
+                    print(f"\n{i}")
                     choice = input("Agree (a) or Disagree (b)?: ")
+                    if choice == "a":
+                        thinking += 1
+                        print("-" * 100)
+                    if choice == "A":
+                        thinking += 1
+                        print("-" * 100)
+                    if choice == "b":
+                        feeling += 1
+                        print("-" * 100)
+                    if choice == "B":
+                        feeling += 1
+                        print("-" * 100)
 
             # prints out the result of MBTI
             print("Thank you for answering our MBTI checker! Here are your results: ")
